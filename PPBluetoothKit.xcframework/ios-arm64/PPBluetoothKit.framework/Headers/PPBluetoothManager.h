@@ -35,6 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)hasLightFunc:(PPDeviceFuncType)funcType;
 
++ (BOOL)hasLanguageSwitchFunc:(PPDeviceFuncType)funcType;
+
 + (void)loadDeviceWithJsonData:(NSArray *)jsonDicDataArray;
 
 + (void)loadDeviceWithJsonFile:(NSString *)filePath;

@@ -82,6 +82,7 @@ typedef NS_OPTIONS(NSUInteger, PPDeviceFuncType) {
     PPDeviceFuncTypeLight = 1 << 11, // 双向广播
     PPDeviceFuncTypeUserInfo = 1 << 12, // 下发用户信息功能
     PPDeviceFuncTypeTimeFormat = 1 << 13, // 时间制式(12/24小时制)
+    PPDeviceFuncTypeLanguageSwitch = 1 << 14, // 语言切换
 
 };
 

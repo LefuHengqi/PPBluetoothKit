@@ -341,6 +341,11 @@ transferContinueStatus:(NSInteger)transferContinueStatus
 /// - Parameter language: 设备语言
 - (void)getLanguageWithCompletion:(void(^)(NSInteger status, PPTorreLanguage language))completion;
 
+/// 获取设备支持的语言列表
+/// - Parameter status: 0成功 1失败
+/// - Parameter languages: 设备支持的语言（0: 中文简体，1: 英文，2: 中文繁体，3: 日语，4: 西班牙语，5: 葡萄牙语，6: 阿拉伯语，7: 韩语）
+- (void)getSupportedLanguageListWithCompletion:(void(^)(NSInteger status, NSArray<NSNumber *> *languages))completion;
+
 /// 获取电量
 - (void)fetchDeviceBatteryInfoWithCompletion:(void(^)(PPBatteryInfoModel *batteryInfo))completion;
 
