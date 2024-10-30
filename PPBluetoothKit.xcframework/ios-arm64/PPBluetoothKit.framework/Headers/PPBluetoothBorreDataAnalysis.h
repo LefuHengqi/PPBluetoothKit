@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (PPAnalysisResultModel *)analysisData:(NSData *)receiveDate;
 
-+ (NSArray <PPBluetoothScaleBaseModel *>*)torreHistoryWithData:(NSData *)data;
++ (NSArray <PPBluetoothScaleBaseModel *>*)torreHistoryWithData:(NSData *)reciveData device:( PPBluetoothAdvDeviceModel *)deviceAdv;
 
 + (PPBatteryInfoModel *)analysisStrengthWithData:(NSData *)receiveData;
 

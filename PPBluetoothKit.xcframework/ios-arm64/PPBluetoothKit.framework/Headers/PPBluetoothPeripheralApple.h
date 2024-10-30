@@ -98,7 +98,17 @@ typedef NS_ENUM(NSUInteger, PPBluetoothAppleWifiConfigState) {
 
 
 /// 查询配置的DNS，即服务器域名
+/// 部分机型不支持该功能
 - (void)queryDNSWithHandler:(void(^)(NSString* DNS))handler;
+
+/// 通过WIFI进行OTA（开发专用，用于工厂模式OTA）
+/// 注：调用此方法前请确保设备已经配网，并且部分机型不支持该功能
+- (void)startTestOTA;
+
+/// 通过WIFI进行OTA
+/// 注：调用此方法前请确保设备已经配网，并且部分机型不支持该功能
+/// code:  0 接收成功，启动OTA，1 接收失败 没有配ssid 退出OTA，2 电量不足 退出OTA，3 充电中 退出OTA
+- (void)startUserOTAWithHandler:(void(^)(NSInteger code))handler;
 
 @end
 

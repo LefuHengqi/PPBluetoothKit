@@ -55,6 +55,9 @@ static NSInteger TORRE_ABNORMAL_HISTORY_INTERVAL_TIME = 1643731200; //2022-2-3ï¼
 + (NSData *)checkDataConvert:(NSData *)receiveData;
 
 + (NSString *)createUUIDByDataHex:(NSString *)hex;
+
++ (NSString *)getBinaryByHex:(NSString *)hex;
+
 @end
 
 NS_ASSUME_NONNULL_END
