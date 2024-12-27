@@ -14,6 +14,8 @@
 #define kBLEAdvDataLocalName @"kCBAdvDataLocalName"
 #define kBLEAdvDataIsConnectable @"kCBAdvDataIsConnectable"
 
+#define kBleuetoothSDKCode 2
+
 typedef NS_ENUM(NSInteger, PPBluetoothState) {
     PPBluetoothStateUnknown = 0,
     PPBluetoothStateResetting,
@@ -52,7 +54,7 @@ typedef NS_ENUM(NSUInteger, PPDeviceProtocolType) {
     PPDeviceProtocolTypeV4, // 4.x版本
     PPDeviceProtocolTypeBorre, // Borre版本
     PPDeviceProtocolTypeDorre, // Dorre版本
-
+    PPDeviceProtocolTypeForre, // Forre版本
 };
 
 
@@ -83,6 +85,10 @@ typedef NS_OPTIONS(NSUInteger, PPDeviceFuncType) {
     PPDeviceFuncTypeUserInfo = 1 << 12, // 下发用户信息功能
     PPDeviceFuncTypeTimeFormat = 1 << 13, // 时间制式(12/24小时制)
     PPDeviceFuncTypeLanguageSwitch = 1 << 14, // 语言切换
+    PPDeviceFuncTypeVoiceBroadcast4Electrodes = 1 << 15, // 语音播报-四电极
+    PPDeviceFuncTypeVoiceBroadcast8Electrodes = 1 << 16, // 语音播报-八电极
+    PPDeviceFuncTypeVoiceBroadcastCF610 = 1 << 17, // 语音播报-CF610
+    PPDeviceFuncTypeWeightInformationType = 1 << 18, // 选中按条下发体重信息给秤,未选中按天下发体重信息给秤
 
 };
 
@@ -155,6 +161,9 @@ typedef NS_ENUM(NSUInteger, PPDevicePeripheralType) {
     
     //Dorre /连接 /人体秤
     PPDevicePeripheralTypePeripheralDorre,
+    
+    //Forre /连接 /人体秤
+    PPDevicePeripheralTypePeripheralForre,
 };
 
 /// 抓零状态

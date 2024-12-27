@@ -31,6 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *productModel;
 @property (nonatomic, assign) PPStandardType standardType;
 @property (nonatomic, assign) PPAvatarTypeType avatarType;
+@property (nonatomic, assign) NSInteger sdkCode;
 
 @property (nonatomic, assign) PPDevicePeripheralType PeripheralType;
 

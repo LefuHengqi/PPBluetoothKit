@@ -12,6 +12,8 @@
 #define kBLEAdvDataLocalName @"kCBAdvDataLocalName"
 #define kBLEAdvDataIsConnectable @"kCBAdvDataIsConnectable"
 
+#define kBLEAdvServiceData @"kCBAdvDataServiceData"
+
 #define kBLEDeviceEnergyScale @"Energy Scale"
 #define kBLEDeviceHealthScale @"Health Scale"
 #define kBLEDeviceHealthScale3 @"Health Scale3"

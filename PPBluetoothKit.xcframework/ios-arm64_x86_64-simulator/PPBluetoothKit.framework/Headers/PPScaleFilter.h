@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// ice 广播标记位
 + (NSString *)iceEquipmentLabelingByAdvData:(NSData *)advData;
 
++ (NSString *)forreMacAddressByCBAdvData:(NSData *)advData andMacAddressStart:(NSInteger )macAddressStart;
+
 
 @end
 

@@ -37,11 +37,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)hasLanguageSwitchFunc:(PPDeviceFuncType)funcType;
 
++ (BOOL)hasVoiceBroadcast4ElectrodesFunc:(PPDeviceFuncType)funcType;
+
++ (BOOL)hasVoiceBroadcast8ElectrodesFunc:(PPDeviceFuncType)funcType;
+
++ (BOOL)hasVoiceBroadcastCF610Func:(PPDeviceFuncType)funcType;
+
++ (BOOL)hasWeightInformationFunc:(PPDeviceFuncType)funcType;
+
 + (void)loadDeviceWithJsonData:(NSArray *)jsonDicDataArray;
 
 + (void)loadDeviceWithJsonFile:(NSString *)filePath;
 
 + (void)loadDeviceWithAppKey:(NSString *)appKey appSecrect:(NSString *)appSecret filePath:(NSString *)path;
+
++ (NSInteger)getSDKCode;
 
 @end
 

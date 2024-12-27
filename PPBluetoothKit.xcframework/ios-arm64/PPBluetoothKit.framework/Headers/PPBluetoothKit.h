@@ -31,6 +31,8 @@
 #import "PPUnitTool.h"
 #import "PPBluetoothPeripheralDorre.h"
 #import "PPBluetoothPeripheralBorre.h"
+#import "PPBluetoothPeripheralForre.h"
+
 #import "PPScaleState.h"
 #import "PPBluetoothDefine.h"
 

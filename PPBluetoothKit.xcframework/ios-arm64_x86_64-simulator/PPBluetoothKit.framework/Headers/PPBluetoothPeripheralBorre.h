@@ -276,8 +276,10 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - 日志
 
 
-/// 同步设备端日志
-/// - Parameter handler: progress 进度 0-1 filePath 文件保存的路径 isFailed 是否失败
+/// 获取设备中日志
+/// - Parameter filePath: 设备日志文件路径，该日志文件保存在沙盒中，如果文件保存到自己服务器后可以按此路径删除该文件
+/// - Parameter progress 获取设备日志的进度
+/// - Parameter isFailed  是否失败
 - (void)dataSyncLog:(void(^)(CGFloat progress, NSString *filePath, BOOL isFailed))handler;
 
 

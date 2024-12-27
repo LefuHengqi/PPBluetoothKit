@@ -142,6 +142,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)closeImpedanceSwitch:(void(^)(NSInteger status))handler;
 
 
+/// 获取设备中日志
+/// - Parameter filePath: 设备日志文件路径，该日志文件保存在沙盒中，如果文件保存到自己服务器后可以按此路径删除该文件
+/// - Parameter progress 获取设备日志的进度
+/// - Parameter isFailed  是否失败
 - (void)dataSyncLog:(void(^)(CGFloat progress, NSString *filePath, BOOL isFailed))handler;
 
 @end
