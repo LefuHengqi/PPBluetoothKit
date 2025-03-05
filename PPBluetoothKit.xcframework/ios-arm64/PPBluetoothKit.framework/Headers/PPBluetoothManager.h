@@ -45,6 +45,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)hasWeightInformationFunc:(PPDeviceFuncType)funcType;
 
++ (BOOL)hasFootLengthTestFunc:(PPDeviceFuncType)funcType;
+
 + (void)loadDeviceWithJsonData:(NSArray *)jsonDicDataArray;
 
 + (void)loadDeviceWithJsonFile:(NSString *)filePath;

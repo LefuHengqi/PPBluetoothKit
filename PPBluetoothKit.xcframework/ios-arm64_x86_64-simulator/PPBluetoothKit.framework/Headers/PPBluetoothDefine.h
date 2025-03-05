@@ -89,6 +89,7 @@ typedef NS_OPTIONS(NSUInteger, PPDeviceFuncType) {
     PPDeviceFuncTypeVoiceBroadcast8Electrodes = 1 << 16, // 语音播报-八电极
     PPDeviceFuncTypeVoiceBroadcastCF610 = 1 << 17, // 语音播报-CF610
     PPDeviceFuncTypeWeightInformationType = 1 << 18, // 选中按条下发体重信息给秤,未选中按天下发体重信息给秤
+    PPDeviceFuncTypeFootLengthTest = 1 << 19, // 脚长测试
 
 };
 
