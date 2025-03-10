@@ -9,13 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "PPBluetoothDefine.h"
 
-typedef NS_ENUM(NSUInteger, PPScaleFootState) {
-    PPScaleFootStateNotMeasured, // 脚长未测量
-    PPScaleFootStatePrepare, // 脚长准备中
-    PPScaleFootStateMeasuring, // 脚长测量中
-    PPScaleFootStateMeasurementSuccessful, // 脚长测量成功
-    PPScaleFootStateMeasurementFailed, // 脚长测量失败
-};
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -47,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *memberId; //数据归属 torre协议用
 
 @property (nonatomic, assign) NSInteger footLen; // 脚长，CM放大100倍
-@property (nonatomic, assign) PPScaleFootState footState; // 脚长测量状态
+
 
 
 @property (nonatomic, assign) NSInteger  z100KhzLeftArmEnCode;//100KHz左手阻抗加密值(下位机上传值)

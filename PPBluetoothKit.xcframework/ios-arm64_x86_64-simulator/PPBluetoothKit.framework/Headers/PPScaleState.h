@@ -9,6 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "PPBluetoothDefine.h"
 
+
+typedef NS_ENUM(NSUInteger, PPScaleFootState) {
+    PPScaleFootStateNotMeasured, // 脚长未测量
+    PPScaleFootStatePrepare, // 脚长准备中
+    PPScaleFootStateMeasuring, // 脚长测量中
+    PPScaleFootStateMeasurementSuccessful, // 脚长测量成功
+    PPScaleFootStateMeasurementFailed, // 脚长测量失败
+};
+
 @interface PPScaleState : NSObject
 
 /// 抓零状态
@@ -31,6 +40,9 @@
 
 /// 重量状态
 @property (nonatomic, assign) PPScaleWeightType weightType;
+
+/// 脚长测量状态
+@property (nonatomic, assign) PPScaleFootState footState;
 
 
 @end

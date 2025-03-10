@@ -202,7 +202,7 @@
 		</data>
 		<key>Headers/PPBluetoothScaleBaseModel.h</key>
 		<data>
-		QnxysY1vDb/OTHjPFgLQTjfZYdM=
+		5D/rnJrYk+GjEIgXw3s1w5W5B5Q=
 		</data>
 		<key>Headers/PPBluetoothTorreDataAnalysis.h</key>
 		<data>
@@ -222,7 +222,7 @@
 		</data>
 		<key>Headers/PPScaleState.h</key>
 		<data>
-		fllQJzUpl9nuxga5+XZXIGrnnFI=
+		/XmNGPy5aez06h8j2RDsRoO/0wA=
 		</data>
 		<key>Headers/PPTorreDFUDataModel.h</key>
 		<data>
@@ -810,11 +810,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QnxysY1vDb/OTHjPFgLQTjfZYdM=
+			5D/rnJrYk+GjEIgXw3s1w5W5B5Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			D0zpS61HEOlNRehK9weDnTZJl/UDaXgUS/UdZKxrHpY=
+			COCu4I6Lch3IZ7vexLf93lF5TsGTbeB8Igf8UtL+MAY=
 			</data>
 		</dict>
 		<key>Headers/PPBluetoothTorreDataAnalysis.h</key>
@@ -865,11 +865,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			fllQJzUpl9nuxga5+XZXIGrnnFI=
+			/XmNGPy5aez06h8j2RDsRoO/0wA=
 			</data>
 			<key>hash2</key>
 			<data>
-			hnU9JUP0wR6hpwHIjMV0vb0UCA4f/ei3wdWKyqFpLMk=
+			wtBBrjzbl8qTHwEJXpSVwKc3tGdjcraG1FAmuCcZ7Gw=
 			</data>
 		</dict>
 		<key>Headers/PPTorreDFUDataModel.h</key>
