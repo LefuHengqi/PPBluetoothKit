@@ -18,16 +18,7 @@
 #import "PPWifiInfoModel.h"
 #import <PPBaseKit/PPBaseKit.h>
 
-typedef NS_ENUM(NSUInteger, PPTorreLanguage) {
-    PPTorreLanguageSimplifiedChinese = 0, // 中文简体
-    PPTorreLanguageEnglish = 1, // 英文
-    PPTorreLanguageTraditionalChinese = 2, // 中文繁体
-    PPTorreLanguageJapanese = 3, // 日语
-    PPTorreLanguageSpanish = 4, // 西班牙语
-    PPTorreLanguagePortuguese = 5, // 葡萄牙语
-    PPTorreLanguageArabic = 6, // 阿拉伯语
-    PPTorreLanguageKorean = 7 // 韩语
-};
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -141,7 +132,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)codeCloseHeartRateSwitch:(void(^)(NSInteger status))handler;
 
 /// 获取阻抗开关状态
-/// - Parameter handler: 0心率测量打开 1心率测量关闭
+/// - Parameter handler: 0阻抗开关打开 1阻抗开关关闭
 - (void)codeFetchImpedanceSwitch:(void(^)(NSInteger status))handler;
 
 /// 打开阻抗测量
@@ -359,6 +350,19 @@ transferContinueStatus:(NSInteger)transferContinueStatus
 
 /// 获取电量
 - (void)fetchDeviceBatteryInfoWithCompletion:(void(^)(PPBatteryInfoModel *batteryInfo))completion;
+
+/// 显示Wi-Fi图标（打开Wi-Fi图标显示）
+/// - Parameter handler: 0设置成功 1设置失败
+- (void)showWifiIcon:(void(^)(NSInteger status))handler;
+
+/// 隐藏Wi-Fi图标（关闭Wi-Fi图标显示）
+/// - Parameter handler: 0设置成功 1设置失败
+- (void)hideWifiIcon:(void(^)(NSInteger status))handler;
+
+/// 获取Wi-Fi图标显示控制状态
+/// - Parameter handler: 0显示Wi-Fi图标  1隐藏Wi-Fi图标
+- (void)fetchWifiIconStatus:(void(^)(NSInteger status))handler;
+
 
 @end
 

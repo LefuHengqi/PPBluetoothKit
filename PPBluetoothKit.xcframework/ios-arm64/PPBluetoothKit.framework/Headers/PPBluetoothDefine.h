@@ -42,6 +42,8 @@ typedef NS_ENUM(NSUInteger, PPDeviceType) {
     PPDeviceTypeCE, //体重秤
     PPDeviceTypeCB, // 婴儿秤
     PPDeviceTypeCA, // 厨房秤
+    PPDeviceTypeNutritional, // 营养秤
+    PPDeviceTypeCoffee, // 咖啡秤
 };
 
 // 设备蓝牙协议版本
@@ -58,6 +60,7 @@ typedef NS_ENUM(NSUInteger, PPDeviceProtocolType) {
     PPDeviceProtocolTypeBorre_A, // Borre-A，属于Borre子集，CF625_PRO专用
     PPDeviceProtocolTypeKorre, // korre
     PPDeviceProtocolTypeLorre, // lorre
+    PPDeviceProtocolTypeMorre, // morre
 };
 
 
@@ -172,6 +175,8 @@ typedef NS_ENUM(NSUInteger, PPDevicePeripheralType) {
     PPDevicePeripheralTypePeripheralKorre,
     //Lorre /连接 /营养秤
     PPDevicePeripheralTypePeripheralLorre,
+    //Morre /连接 /咖啡秤
+    PPDevicePeripheralTypePeripheralMorre,
 };
 
 /// 抓零状态
@@ -181,6 +186,7 @@ typedef NS_ENUM(NSUInteger, PPScaleCaptureZeroType) {
     // 抓零成功
     PPScaleCaptureZeroTypeZeroSuccess,
 };
+
 
 /// 心率测量状态
 typedef NS_ENUM(NSUInteger, PPScaleHeartRateType) {
@@ -275,6 +281,100 @@ typedef NS_ENUM(NSUInteger, PPDeviceButtonState) {
     PPDeviceButtonStateExecuting = 1, // 执行中
     PPDeviceButtonStateSuccess = 2, // 执行成功
     PPDeviceButtonStateFail = 3, // 执行失败
+};
+
+
+typedef NS_ENUM(NSInteger, PPWeightStatus) {
+    /// 实时重量
+    PPWeightStatusRealTime = 0,
+    /// 稳定重量
+    PPWeightStatusStable = 1,
+    /// 超重
+    PPWeightStatusOverload = 2
+};
+
+typedef NS_ENUM(NSUInteger, PPTimerStatus) {
+    /// 计时器空闲
+    PPTimerStatusIdle       = 0,
+    /// 计时器开始
+    PPTimerStatusStart    = 1,
+    /// 计时器暂停
+    PPTimerStatusPaused     = 2,
+    /// 计时器超时
+    PPTimerStatusTimeout    = 3,
+};
+
+
+typedef NS_ENUM(NSInteger, PPCoffeeCurrentMode) {
+    /// 手冲模式1
+    PPCoffeeCurrentModePourOver1 = 0,
+    /// 手冲模式2
+    PPCoffeeCurrentModePourOver2 = 1,
+    /// 意式模式
+    PPCoffeeCurrentModeEspresso = 2
+};
+
+
+typedef NS_ENUM(NSInteger, PPCoffeeStage) {
+    /// 设置水粉比
+    PPCoffeeStageSetRatio = 0,
+    /// 放置咖啡壶
+    PPCoffeeStagePlacePot = 1,
+    /// 放置滤杯滤纸
+    PPCoffeeStagePlaceFilter = 2,
+    /// 加入咖啡粉
+    PPCoffeeStageAddCoffee = 3,
+    /// 等待注水 [等待萃取]
+    PPCoffeeStageWaitWater = 4,
+    /// 注水中 [萃取中]
+    PPCoffeeStagePouring = 5,
+    /// 冲煮完成 [萃取完成]
+    PPCoffeeStageFinished = 6,
+    /// 展示粉液比
+    PPCoffeeStageShowRatio = 7
+};
+
+/// 咖啡阶段-子模式
+typedef NS_ENUM(NSInteger, PPCoffeeStageSubMode) {
+    /// 咖啡阶段2和3  IDLE
+    PPCoffeeStageSubModeIDLE = 0,
+    /// 咖啡阶段2和3  等待去皮
+    PPCoffeeStageSubModeWaitingForPeeling = 1,
+    
+};
+
+
+typedef NS_ENUM(NSInteger, PPFlowRateFlag) {
+    /// 实时流速 (0)
+    PPFlowRateFlagRealTime = 0,
+    /// 平均流速 (1)
+    PPFlowRateFlagAverage = 1
+};
+
+
+
+/// 营养秤当前模式
+typedef NS_ENUM(NSUInteger, PPNutritionalScaleMode) {
+    // 秤重模式
+    PPNutritionalScaleModeWeight = 0,
+    // 食物模式
+    PPNutritionalScaleModeFood = 1,
+};
+
+typedef NS_ENUM(NSUInteger, PPTorreLanguage) {
+    PPTorreLanguageSimplifiedChinese = 0, // 中文简体
+    PPTorreLanguageEnglish = 1, // 英文
+    PPTorreLanguageTraditionalChinese = 2, // 中文繁体
+    PPTorreLanguageJapanese = 3, // 日语
+    PPTorreLanguageSpanish = 4, // 西班牙语
+    PPTorreLanguagePortuguese = 5, // 葡萄牙语
+    PPTorreLanguageArabic = 6, // 阿拉伯语
+    PPTorreLanguageKorean = 7, // 韩语
+    PPTorreLanguageGerman = 8, // 德语
+    PPTorreLanguageSlovak = 9, // 斯洛伐克语
+    PPTorreLanguageCzech = 10, // 捷克语
+    PPTorreLanguagePolish = 11, // 波兰语
+    PPTorreLanguageHungarian = 12, // 匈牙利语
 };
 
 

@@ -36,6 +36,7 @@
 #import "PPTorreSettingModel.h"
 #import "PPKorreUserModel.h"
 #import "PPKorreFoodInfo.h"
+#import "PPCoffeeScaleDataModel.h"
 
 #import "PPScaleState.h"
 #import "PPBluetoothDefine.h"
