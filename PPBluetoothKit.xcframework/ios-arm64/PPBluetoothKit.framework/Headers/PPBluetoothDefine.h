@@ -61,6 +61,7 @@ typedef NS_ENUM(NSUInteger, PPDeviceProtocolType) {
     PPDeviceProtocolTypeKorre, // korre
     PPDeviceProtocolTypeLorre, // lorre
     PPDeviceProtocolTypeMorre, // morre
+    PPDeviceProtocolTypeBorre_B, // Borre-B，属于Borre子集，CW326专用
 };
 
 

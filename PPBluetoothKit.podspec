@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PPBluetoothKit"
-  spec.version      = "1.2.28"
+  spec.version      = "1.2.29"
   spec.summary      = "A short description of PPBluetoothKit."
 
   # This description is used to generate tags and improve search results.
