@@ -62,6 +62,7 @@ typedef NS_ENUM(NSUInteger, PPDeviceProtocolType) {
     PPDeviceProtocolTypeLorre, // lorre
     PPDeviceProtocolTypeMorre, // morre
     PPDeviceProtocolTypeBorre_B, // Borre-B，属于Borre子集，CW326专用
+    PPDeviceProtocolTypeBorre_C, // Borre-C，属于Borre子集，亚飞655设备
 };
 
 
@@ -98,6 +99,10 @@ typedef NS_OPTIONS(NSUInteger, PPDeviceFuncType) {
     PPDeviceFuncTypeWeightInformationType = 1 << 18, // 选中按条下发体重信息给秤,未选中按天下发体重信息给秤
     PPDeviceFuncTypeFootLengthTest = 1 << 19, // 脚长测试
     PPDeviceFuncTypeWifi5G = 1 << 20, // wifi配网(支持5G)
+    PPDeviceFuncTypeNo7Data = 1 << 21, // Borre-不支持7/14/16天数据
+    PPDeviceFuncTypeTargetDatas = 1 << 22, // Borre-支持目标体重体脂BMI
+    PPDeviceFuncTypeNicknameDorre = 1 << 23, // Dorre-支持昵称
+    PPDeviceFuncType16DatasDorre = 1 << 24, // Dorre-支持16天数据
 };
 
 // 设备精度
@@ -376,6 +381,42 @@ typedef NS_ENUM(NSUInteger, PPTorreLanguage) {
     PPTorreLanguageCzech = 10, // 捷克语
     PPTorreLanguagePolish = 11, // 波兰语
     PPTorreLanguageHungarian = 12, // 匈牙利语
+};
+
+typedef NS_ENUM(NSUInteger, PPBluetoothAppleWifiConfigState) {
+    PPBluetoothAppleWifiConfigStateSuccess = 0, // 配网成功 Successful distribution network
+    PPBluetoothAppleWifiConfigStateLowBatteryLevel = 1, // 电量过低 Low battery level
+    PPBluetoothAppleWifiConfigStateRegistFail = 3, // 注册失败 login has failed
+    PPBluetoothAppleWifiConfigStateUnableToFindRouter = 5, // 找不到路由 Unable to find route
+    PPBluetoothAppleWifiConfigStatePasswordError = 6, //密码错误 Password error
+    PPBluetoothAppleWifiConfigStateOtherFail, // 其它错误（app可以不用关注） Other errors (app can be ignored)
+    PPBluetoothAppleWifiConfigGetConfigFail = 4, //获取配置失败 Failed to get configuration
+};
+
+typedef NS_ENUM(NSInteger, PPUserBodyDataType) {
+    PPUserBodyDataTypeWeight = 1,  // 体重
+    PPUserBodyDataTypeBMI = 2,  // BMI
+    PPUserBodyDataTypeFat = 3,  // 体脂率
+    PPUserBodyDataTypeWaterPercentage = 4,  // 水分率
+    PPUserBodyDataTypeMuscleMass = 5, // 肌肉量
+    PPUserBodyDataTypeBMR = 6, // BMR
+    PPUserBodyDataTypeMusclePercentage = 7,  // 肌肉率
+
+};
+
+typedef NS_ENUM(NSUInteger, PPTargetStatus) {
+    PPTargetStatusClose = 0,// 目标关闭或失效
+    PPTargetStatusOpen = 1, // 目标进行中
+    
+    
+};
+
+typedef NS_ENUM(NSInteger, PPDFUState) {
+    PPDFUStateDefault = 0, // 默认状态
+    PPDFUStateRequestUpgrade, // 开始发送升级请求
+    PPDFUStateSendingData, // 正在发送升级数据，升级中
+    PPDFUStateCompleted, // 发送数据结束
+    PPDFUStateError // 升级出错
 };
 
 

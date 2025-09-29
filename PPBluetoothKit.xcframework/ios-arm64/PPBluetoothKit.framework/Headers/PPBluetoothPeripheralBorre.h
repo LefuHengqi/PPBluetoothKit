@@ -19,6 +19,9 @@
 #import "PPUserRecentBodyData.h"
 #import "PPTorreSettingModel.h"
 #import "PPBatteryInfoModel.h"
+#import "PPTargetModel.h"
+#import "PPUserBodyData.h"
+
 
 typedef NS_ENUM(NSUInteger, Borre608LightMode) {
     Borre608LightModeBreathing = 0,
@@ -351,6 +354,25 @@ transferContinueStatus:(NSInteger)transferContinueStatus
 
 /// 获取电量
 - (void)fetchDeviceBatteryInfoWithCompletion:(void(^)(PPBatteryInfoModel *batteryInfo))completion;
+
+/// 同步目标数据
+- (void)syncTargetDataWithUser:(PPTorreSettingModel *)userModel targetList:(NSArray<PPTargetModel *> *)targetList handler:(void(^)(int status))handler;
+
+/// 同步最近7次趋势数据（部分设备支持）
+/// - Parameters:
+///     - recentList - 最近7次数据，按时间升序排序
+///     - type - 7次数据的类型（体重/BMI/体脂率/水分率/肌肉量/BMR）
+///     - userModel - 用户信息，需要 userID memberID
+///     - lastWeightData - 最后一次的体重数据
+- (void)syncLatest7BodyData:(NSArray <PPUserBodyData *> *)recentList type:(PPUserBodyDataType)type user:(PPTorreSettingModel *)userModel lastWeightData:(PPUserBodyData *)lastWeightData handler:(void(^)(int status))handler;
+
+
+/// 设置设备目标状态（部分设备支持）
+///  status: 0-成功，1-失败
+- (void)setTargetStatus:(PPTargetStatus)status handler:(void(^)(int status))handler;
+
+/// 获取设备目标状态（部分设备支持）
+- (void)getTargetStatusWithHandler:(void(^)(PPTargetStatus status))handler;
 
 @end
 

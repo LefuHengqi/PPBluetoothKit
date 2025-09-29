@@ -12,9 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PPBluetoothManager : NSObject
 
-
-
-
 + (BOOL)hasScaleFunc:(PPDeviceFuncType)funcType;
 
 + (BOOL)hasHistoryFunc:(PPDeviceFuncType)funcType;
@@ -53,6 +50,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)hasWeightInformationFunc:(PPDeviceFuncType)funcType;
 
 + (BOOL)hasFootLengthTestFunc:(PPDeviceFuncType)funcType;
+
++ (BOOL)has7DataFunc:(PPDeviceFuncType)funcType;
+
++ (BOOL)hasTargetDatasFunc:(PPDeviceFuncType)funcType;
 
 + (void)loadDeviceWithJsonData:(NSArray *)jsonDicDataArray;
 

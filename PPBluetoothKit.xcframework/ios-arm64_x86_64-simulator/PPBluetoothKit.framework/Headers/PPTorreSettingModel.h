@@ -26,13 +26,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *userName;
 @property (nonatomic, assign) NSInteger deviceHeaderIndex;
 
-@property (nonatomic, assign) CGFloat currentWeight;
+
 @property (nonatomic, assign) CGFloat targetWeight;
 @property (nonatomic, assign) CGFloat idealWeight;
 
 //local pIndex，Borre协议专用
 @property (nonatomic, assign) NSInteger PIndex;
 
+@property (nonatomic, assign) NSInteger timeStamp; // 时间戳，该用户最近一次称重时间，亚飞设备用户列表返回
 
 @property (nonatomic, copy) NSArray <PPUserHistoryData *> *recentData;
 
