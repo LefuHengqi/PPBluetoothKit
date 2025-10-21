@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSArray *)userInfo608:(PPTorreSettingModel *)userModel device:(PPBluetoothAdvDeviceModel *)deviceAdv;
 
-- (NSArray *)userInfo:(PPTorreSettingModel *)userModel;
+//- (NSArray *)userInfo:(PPTorreSettingModel *)userModel;
 
 - (NSArray *)memberByUserId:(NSString *)userId memberId:(NSString *)memberId;
 
@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)colorModeWithLightEnable:(BOOL)lightEnable lightMode:(NSInteger)lightMode normalColor:(NSString *)normalColor gainColor:(NSString *)gainColor lossColor:(NSString *)lossColor;
 
-- (NSArray *)bodyData7Days:(NSArray <PPUserRecentBodyData *> *)recentData type:(PPUserBodyDataType)type lastRecentBodyData:(PPUserRecentBodyData*)lastBodyData user:(PPTorreSettingModel *)userModel device:(PPBluetoothAdvDeviceModel *)device;
+- (NSArray *)bodyData7Days:(NSArray <PPUserRecentBodyData *> *)recentData type:(PPUserBodyDataType)type lastRecentBodyData:(PPUserRecentBodyData*)lastBodyData user:(PPTorreSettingModel *)userModel device:(PPBluetoothAdvDeviceModel *)device count:(int)count;
 
 - (NSArray *)targetDataWithUser:(PPTorreSettingModel *)userModel targetList:(NSArray<PPTargetModel *> *)targetList;
 

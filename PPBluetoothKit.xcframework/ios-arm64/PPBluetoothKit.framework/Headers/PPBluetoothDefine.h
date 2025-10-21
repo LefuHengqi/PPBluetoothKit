@@ -101,8 +101,8 @@ typedef NS_OPTIONS(NSUInteger, PPDeviceFuncType) {
     PPDeviceFuncTypeWifi5G = 1 << 20, // wifi配网(支持5G)
     PPDeviceFuncTypeNo7Data = 1 << 21, // Borre-不支持7/14/16天数据
     PPDeviceFuncTypeTargetDatas = 1 << 22, // Borre-支持目标体重体脂BMI
-    PPDeviceFuncTypeNicknameDorre = 1 << 23, // Dorre-支持昵称
-    PPDeviceFuncType16DatasDorre = 1 << 24, // Dorre-支持16天数据
+    PPDeviceFuncTypeDorreNickname = 1 << 23, // Dorre-支持昵称
+    PPDeviceFuncTypeDorre16Datas = 1 << 24, // Dorre-支持16天数据
 };
 
 // 设备精度

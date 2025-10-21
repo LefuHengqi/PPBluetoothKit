@@ -47,13 +47,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (BOOL)hasVoiceBroadcastCF610Func:(PPDeviceFuncType)funcType;
 
-+ (BOOL)hasWeightInformationFunc:(PPDeviceFuncType)funcType;
++ (BOOL)hasWeightInformationFunc:(PPDeviceFuncType)funcType API_DEPRECATED("已过期，不再使用(Expired and no longer in use)", ios(1.0, API_TO_BE_DEPRECATED), visionos(1.0, API_TO_BE_DEPRECATED));
 
 + (BOOL)hasFootLengthTestFunc:(PPDeviceFuncType)funcType;
 
-+ (BOOL)has7DataFunc:(PPDeviceFuncType)funcType;
++ (BOOL)has7DataFunc:(PPDeviceFuncType)funcType API_DEPRECATED("已过期，不再使用(Expired and no longer in use)", ios(1.0, API_TO_BE_DEPRECATED), visionos(1.0, API_TO_BE_DEPRECATED));
 
-+ (BOOL)hasTargetDatasFunc:(PPDeviceFuncType)funcType;
++ (BOOL)hasTargetDatasFunc:(PPDeviceFuncType)funcType API_DEPRECATED("已过期，不再使用(Expired and no longer in use)", ios(1.0, API_TO_BE_DEPRECATED), visionos(1.0, API_TO_BE_DEPRECATED));
 
 + (void)loadDeviceWithJsonData:(NSArray *)jsonDicDataArray;
 

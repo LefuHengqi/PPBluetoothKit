@@ -37,11 +37,24 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *customDeviceName; // 自定义名称
 @property (nonatomic, copy) NSString *imgUrl; // 设备配置的图片
 @property (nonatomic, assign) NSInteger brandId;
+@property (nonatomic, strong) NSDictionary *advancedConfig;
 
 @property (nonatomic, assign) PPDevicePeripheralType PeripheralType;
 
 
 - (void)fillWithAdvertisementData:(NSDictionary<NSString *,id> *)advertisementData andRSSI:(NSNumber *)rssi;
+
+- (NSInteger)getTypeCanvasHeight;
+- (NSInteger)getTypeCanvasWidth;
+- (NSInteger)getSelectUserOrderCode;
+- (NSInteger)getBodyAgeTypeCode;
+- (NSInteger)getSupportNicknameCode;
+- (NSInteger)getSupportHistoryCode;
+- (NSInteger)getHistoricalDaysCode;
+- (NSInteger)getHistoricalTypeCode;
+- (NSInteger)getSyncTargetCode;
+- (NSInteger)getTypeLen;
+- (NSInteger)getMaxFoodCount;
 
 
 + (PPBluetoothAdvDeviceModel*)filterDeviceTypeAdvModelByCBAdvDataManufacturerData:(NSData *)advData andDeivceName:(NSString *)name RSSI:(NSNumber *)RSSI;

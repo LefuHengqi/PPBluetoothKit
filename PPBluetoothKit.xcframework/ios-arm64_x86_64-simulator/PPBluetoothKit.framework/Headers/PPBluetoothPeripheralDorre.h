@@ -17,7 +17,7 @@
 #import "PPTorreDFUDataModel.h"
 #import "PPWifiInfoModel.h"
 #import <PPBaseKit/PPBaseKit.h>
-
+#import "PPUserBodyData.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
@@ -341,6 +341,17 @@ transferContinueStatus:(NSInteger)transferContinueStatus
 
 /// 获取电量
 - (void)fetchDeviceBatteryInfoWithCompletion:(void(^)(PPBatteryInfoModel *batteryInfo))completion;
+
+/// 同步最近16天趋势数据（部分设备支持）
+/// - Parameters:
+///     - recentList - 最近16天数据，按时间升序排序
+///     - type - 16天数据的类型（目前只支持体重）
+///     - userModel - 用户信息，需要 userID memberID
+///- status：0-成功，1-失败
+- (void)syncLatest16BodyData:(NSArray <PPUserBodyData *> *)recentList type:(PPUserBodyDataType)type user:(PPTorreSettingModel *)userModel handler:(void(^)(int status))handler;
+
+/// 用户名转换为设备支持的用户名（部分设备支持）
+- (NSString *)convertDeviceUserName:(NSString *)userName;
 
 @end
 

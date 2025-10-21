@@ -12,7 +12,7 @@
 @interface PPUserBodyData : NSObject
 
 @property (nonatomic, assign) CGFloat value; // 原始数值
-@property (nonatomic, assign) double timeStamp; // 时间戳（秒）
+@property (nonatomic, assign) double timeStamp; // 时间戳（毫秒）
 
 @end
 
